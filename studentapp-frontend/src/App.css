@@ -1,0 +1,1491 @@
+@import url("https: //cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.map");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css");
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.footer {
+  height: 50px;
+  bottom: 0;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  color: white;
+  background-color: #000814;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  text-align: left;
+  background-color: #000814;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.action {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.action-btn {
+  width: 55px;
+  text-align: center;
+}
+
+.buttonsCont {
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.buttons1 {
+  padding: 10px;
+}
+
+.main {
+  padding-top: 70px;
+  padding-bottom: 80px;
+  height: fit-content;
+}
+
+.viewcard {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.viewcard-inside {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.loginPage {
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500px;
+}
+
+.loginForm {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+}
+
+.employee_image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.empImg {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+}
+
+.start-btn1 {
+  width: 50px;
+  height: 20px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.dropDownProfile {
+  position: absolute;
+  top: 4.5rem;
+  right: 1.5rem;
+  width: 250px;
+  padding: 10px;
+  z-index: 10;
+  font-size: small;
+}
+
+.dropDownProfile>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px rgb(231, 231, 231) solid;
+  gap: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 21px -10px rgba(0, 0, 0, 0.3);
+}
+
+.dropDownProfile div[id="image"]>img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.dropDownProfile button[id="viewProfile"] {
+  width: 130px;
+  height: 30px;
+  background-color: #ffffff;
+  color: #434343;
+  font-family: Trebuchet MS;
+  padding: 13px 15px;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+}
+
+.dropDownProfile button[id="viewProfile"] img {
+  display: block;
+  width: 17px;
+  aspect-ratio: 1;
+  filter: invert();
+}
+
+.dropDownProfile button[id="viewProfile"]:hover {
+  background-color: #f2f2f2;
+}
+
+.dropDownProfile::before {
+  content: "";
+  position: absolute;
+  top: -0.7rem;
+  right: 1.1rem;
+  width: 0px;
+  height: 0px;
+  background-color: white;
+  border: 0px solid grey;
+}
+
+.dropDownText {
+  color: black;
+  cursor: pointer;
+}
+
+.dropDownButton {
+  color: black;
+  cursor: pointer;
+}
+
+ul.no-bullets {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profileImage {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+
+
+.profileImage:hover {
+  opacity: 80%;
+}
+
+.dropDownItems {
+  border-radius: 5px;
+}
+
+.dropDownItems:hover {
+  background-color: aquamarine;
+}
+
+.courseList {
+  word-wrap: normal;
+  table-layout: fixed;
+  width: 100%;
+  gap: 10px;
+}
+
+.courseListRows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.courses {
+  background-color: #9da9a070;
+  word-break: normal;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.courses_title {
+  font-size: larger;
+  font-weight: 600;
+}
+
+.course_title_row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px 0 10px;
+}
+
+.coursebutton {
+  text-align: right;
+}
+
+.coursebutton button {
+  width: max(15%, 135px);
+}
+
+.container1 {
+  width: 950px;
+}
+
+.courseprereqdiv {
+  font-size: small;
+  text-align: right;
+}
+
+.coursedescriptiondiv {
+  text-align: left;
+  padding: 10px;
+}
+
+.coursedescriptiondiv div {
+  font-weight: 600;
+}
+
+.viewCourse-button button {
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.homeComponentApps {
+  padding: 10px;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+.homeComponentApps img {
+  width: 70px;
+  aspect-ratio: 1;
+  padding: 0px;
+  filter: invert();
+}
+
+
+
+.homeComponentApps label {
+  text-align: center;
+  font-size: small;
+}
+
+.homeComponentApps:hover {
+  background-color: #282c3444;
+}
+
+.homeComponentAppsContainer {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+}
+
+
+.schedulemain {
+  padding-bottom: 100px;
+  overflow: scroll;
+}
+
+.scheduletable {
+  display: flex;
+  flex-direction: row;
+  background-color: #f1f1f1;
+  width: max(450px, 100%);
+}
+
+.scheduletabledays {
+  width: 18%;
+  text-align: center;
+}
+
+.scheduletabletime {
+  width: 10%;
+  text-align: center;
+}
+
+.scheduletabletime div {
+  text-align: center;
+  font-size: 100%;
+  height: 30px;
+  border-bottom: 1px solid #e0e0e0;
+  border-top: 1px solid #e0e0e0;
+}
+
+.scheduletableclasses {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.scheduletabletime_box {
+  height: 30px;
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  flex-wrap: wrap;
+}
+
+.scheduletableclasses_course {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+}
+
+.scheduletableclasses_coursebox {
+  position: inherit;
+  height: 50px;
+  width: 90%;
+  background-color: rgb(33, 150, 243);
+  border-radius: 5px;
+  box-shadow: 0 0px 2px 0px grey;
+  left: 5%;
+  flex-wrap: wrap;
+}
+
+.scheduletableclasses_coursebox_courselabel {
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.scheduletableclasses_coursebox_courselabel label {
+  font-weight: bold;
+  font-style: italic;
+  font-size: small;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+
+.scheduletableclasses_coursebox_sectionnumlabel {
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.scheduletableclasses_coursebox_sectionnumlabel label {
+  font-style: italic;
+  font-size: small;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+
+.viewStudentComp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex: 1;
+  gap: 5px;
+}
+
+.viewStudentSides {
+  padding: 10px;
+  box-shadow: 0 1px 7px 1px rgba(70, 100, 100, 0.4);
+  border-radius: 10px;
+}
+
+.viewStudent_infos {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.viewStudent_info_rows {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin: 0;
+}
+
+.viewStudent_info_rows label {
+  margin: 0;
+  font-size: small;
+}
+
+.viewStudent_info_rows section {
+  background-color: #9da9a0;
+  border-radius: 5px;
+  padding: 3px;
+  margin: 0;
+}
+
+.viewStudent_info_value {
+
+  border: #282c34;
+  border-radius: 5px;
+  padding: 3px;
+  margin: 0;
+}
+
+.viewStudent_info_value input {
+  background-color: white;
+  padding-left: 15px;
+
+}
+
+.viewStudent_info_value input:disabled {
+  opacity: 100%;
+}
+
+.viewStudentInfo_profileSide {
+  display: flex;
+  border: #282c34;
+  border-radius: 5px;
+  padding: 3px;
+  justify-content: center;
+  gap: 5px;
+}
+
+.viewStudentInfo_profileSide button {
+  border: 1px solid rgba(27, 31, 35, .15);
+  background-color: #19647e;
+  width: 120px;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  flex: 3 1 auto;
+}
+
+.viewStudentInfo_profileSide_div {
+  display: flex;
+  justify-content: center;
+  padding: 3px;
+}
+
+.viewStudentInfo_profileSide_img img {
+  border-radius: 50%;
+  width: 60%;
+  height: 60%;
+}
+
+.viewStudentInfo_profileSide_img {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.viewStudent_profileSide_value {
+  background-color: rgba(255, 255, 255);
+  border-radius: 5px;
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+  font-size: small;
+}
+
+.viewStudentComp-buttons {
+  position: sticky;
+  top: 60px;
+  z-index: 90;
+  padding: 5px;
+  padding-right: 10px;
+  border-radius: 5px;
+  background-color: #9da9a0;
+  display: flex;
+  justify-content: right;
+  gap: 15px;
+}
+
+.viewStudentComp-buttons button {
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.AddUserInput {
+  border: none;
+  border-radius: 4px;
+  font-size: small;
+  width: 102%;
+
+}
+
+.AddUserInput:focus {
+  outline: 0;
+  border: 2px solid rgb(95, 137, 255);
+}
+
+.AddUserInput:disabled {
+  color: black;
+}
+
+.RequestCourse_SearchBars {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.RequestCourse_SearchBarsLabel {
+  font-size: 1.3vmax;
+}
+
+.RequestCourse_AddBtn {
+  display: flex;
+
+  padding: 20px 0 20px 0;
+  width: 100px;
+
+
+}
+
+.RequestCourse_AddBtn button {
+  width: 100%;
+  background-color: #282c34;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.RequestCourse_chosenClasses {
+  display: flex;
+  flex-direction: row;
+}
+
+.RequestCourse_chosenClasses_div {
+  display: flex;
+  flex-direction: column;
+  align-content: safe;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  border: rgba(0, 0, 0, 0.1) solid 1px;
+  border-style: outset;
+}
+
+.RequestCourse_chosenClasses_data {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  border: rgba(0, 0, 0, 0.1) solid 1px;
+  border-style: outset;
+}
+
+.RequestCourse_chosenClasses_rows {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 3px;
+  width: 100%;
+  border-radius: 5px;
+  border: rgba(0, 0, 0, 0.3) dotted 1px;
+}
+
+.RequestCourse_chosenClasses_rows div {
+  width: 20%;
+  min-height: 65px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  border-right: rgba(0, 0, 0, 0.2) dotted 1px;
+
+  font-size: small;
+  margin: 0;
+}
+
+.RequestCourse_chosenClasses_rows button {
+
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  border: 0;
+  font-size: small;
+  margin: 0;
+
+  background-color: #8b1414;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.RequestCourse_SubmitBtn {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+
+.RequestCourse_SubmitBtn button {
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  border: 0;
+  font-size: small;
+
+  height: 50px;
+  width: 120px;
+  background-color: #2e55a3;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.RequestCourse_SubmitBtn button:disabled {
+  opacity: 70%;
+}
+
+.RequestCourse_topBtns {
+  display: flex;
+  justify-content: space-around;
+}
+
+.RequestCourse_topBtns button {
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  border: 0;
+  font-size: small;
+
+  height: 50px;
+  width: min(20%, 200px);
+  background-color: #282c34;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: pre-wrap;
+}
+
+.ViewAssignment {
+  display: flex;
+  flex-direction: column;
+  /*   background-color: rgba(0, 0, 0, 0.1);
+ */
+  border-radius: 10px;
+}
+
+.ViewAssignment_title {
+  padding-left: 15px;
+  display: flex;
+  justify-content: first baseline;
+  gap: 15px;
+  background-color: #282c34;
+  color: white;
+  border-radius: 10px 10px 0 0;
+}
+
+.ViewAssignment_title>* {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 500;
+}
+
+.ViewAssignment_labels {
+  background-color: #282c34;
+  color: white;
+  padding-left: 15px;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.ViewAssignment_details {
+  font-size: small;
+  padding: 10px;
+}
+
+.ViewAssignment_points {
+  padding-left: 5px;
+  padding-right: 5px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  font-size: large;
+}
+
+.ViewAssignment_limits {
+  padding-left: 5px;
+  padding-right: 5px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  font-size: small;
+}
+
+.StudentClassList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5vw;
+}
+
+
+
+.StudentClass_courseBox {
+  cursor: pointer;
+  position: inherit;
+
+  width: min(220px, 40vw);
+  aspect-ratio: 1;
+  background-color: rgb(2, 23, 41);
+  border-radius: 5px;
+  box-shadow: 0 0px 2px 0px grey;
+  left: 5%;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.StudentClass_courseBox_courselabel {
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.StudentClass_courseBox_courselabel label {
+  font-weight: bold;
+  font-style: italic;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: white;
+}
+
+.StudentClass_courseBox_sectionnumlabel {
+  background-color: rgb(2, 23, 41);
+  border-radius: 0 0 10px 10px;
+  padding: 10px;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.StudentClass_courseBox_sectionnumlabel label {
+  font-style: italic;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: white;
+}
+
+.ReportCardContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 1.5vw;
+}
+
+.ReportCardContainer>div {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  width: max(90%, 480px);
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+
+}
+
+.ReportCard_title {
+  display: flex;
+  padding: 0 15px 5px 20px;
+  font-weight: 900;
+}
+
+.ReportCard_data {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ReportCard_Row {
+  display: flex;
+  padding: 5px;
+  border-top: solid 0.5px grey;
+}
+
+.ReportCard_Row_course {
+  display: flex;
+}
+
+.ReportCard_Row_grade {
+  display: flex;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.ReportCard_Row_grade div {
+  width: 20px;
+}
+
+.ReportCard_legend {
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ReportCard_legend_labels {
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ViewSection_container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ViewSection_header {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 150px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ViewSection_header label {
+  font-size: small;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+}
+
+.ViewSection_header h1 {
+  font-size: xx-large;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+
+.ViewSection_options {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding: 1px 0 1px 0;
+}
+
+.ViewSection_row {
+  background-color: rgba(255, 255, 255);
+  width: 100%;
+  height: 50px;
+  display: flex;
+  padding: 0 0 0 10px;
+  justify-content: space-between;
+
+
+}
+
+.ViewSection_row:hover {
+  background-color: rgba(255, 255, 255, 0.9)
+}
+
+.ViewSection_row div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.arrow_right {
+  margin: 18px;
+  display: flex;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid rgba(0, 0, 0, 0.5);
+  border-left: 2px solid rgba(0, 0, 0, 0.5);
+  transform: rotate(135deg);
+}
+
+.ListSections_container {
+  display: flex;
+  justify-content: center;
+}
+
+.ListSections_table {
+  max-width: 90%;
+}
+
+.ListSections_titles {
+  display: flex;
+
+}
+
+.ListSections_titles div {
+  display: flex;
+  justify-content: left;
+  font-weight: 600;
+}
+
+.ListSections_row {
+  display: flex;
+  font-size: small;
+
+}
+
+.ListSections_row>div {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.ListSections_startTimes {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-self: center;
+
+}
+
+.ListAssignment {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background-color: rgb(0, 0, 0, 0.2);
+  padding: 1px 0 1px 0;
+}
+
+.ListAssignmentComp {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.ListAssignmentRow {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(255, 255, 255);
+  justify-content: space-between;
+  padding: 5px;
+  gap: 10px;
+}
+
+.ListAssignmentRow:hover {
+  background-color: rgba(255, 255, 255, 0.9)
+}
+
+.ListAssignment-checkbox {
+  background-color: rgb(255, 255, 255);
+}
+
+.ListAssignmentRow_items {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.ListAssignmentRow img {
+  width: 25px;
+  aspect-ratio: 1;
+  filter: invert();
+}
+
+.ListAssignmentRowContainer {
+  background-color: rgb(0, 0, 0, 0.2);
+}
+
+.ListAssignmentRow_labels {
+  display: flex;
+  flex-direction: column;
+}
+
+.ListAssignmentRow_title {
+  font-weight: 500;
+  display: flex;
+  gap: 10px;
+}
+
+.ListAssignmentRow_subtitle {
+  display: flex;
+  font-size: x-small;
+  gap: 0.3vw;
+}
+
+.ListAssignmentRow_subtitle div {
+  display: flex;
+  font-weight: 600;
+}
+
+.listOfPeopleFilter_items {
+  gap: 10px;
+
+}
+
+.listOfPeopleFilter_buttons {
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 70px;
+}
+
+.ListAssignmentTitle {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ListAssignmentNewButton {
+  display: flex;
+  gap: 5px;
+}
+
+.ListAssignmentNewButton button {
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  border: 0;
+  font-size: small;
+
+  height: 70%;
+  border: 1px solid rgba(27, 31, 35, .15);
+  background-color: #000814;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: pre-wrap;
+}
+
+.listOfPeopleFilter_buttons button {
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  border: 0;
+  font-size: small;
+
+  height: 50%;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: pre-wrap;
+}
+
+
+.listOfPeopleFilter {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
+  background-color: rgb(0, 0, 0, 0.2);
+  padding: 5px 15px 0 15px;
+  border-radius: 5px;
+}
+
+.ViewListPeople_container {
+  border-radius: 5px;
+  font-size: smaller;
+}
+
+
+.ViewListPeople_more_button {
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  border: 0;
+  font-size: small;
+
+  background-color: rgba(5, 89, 168, 0.548);
+  border-radius: 6px;
+  color: #2c2121;
+  cursor: pointer;
+  display: inline-block;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: pre-wrap;
+}
+
+.sort_arrow {
+  left: 3px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: solid 5px transparent;
+  margin: 4px 4px 0 3px;
+  background: transparent;
+  border-top: solid 7px rgb(0, 0, 0);
+  border-bottom-width: 0;
+}
+
+
+.CreateAssignmentsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+
+}
+
+.CreateAssignmentsContainer input,
+select {
+  width: 100%;
+  height: 40px;
+  padding-left: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+
+  background-color: white;
+  color: rgb(46, 45, 45);
+}
+
+.CreateAssignmentsNums {
+  display: flex;
+  gap: 10px;
+
+  justify-content: space-between;
+
+
+}
+
+.CreateAssignmentsNums>div {
+  width: 33%;
+}
+
+
+.CreateAssignmentsContainer textarea {
+  width: 100%;
+  height: 350px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.CreateAssignmentsSubmitButton {
+  display: flex;
+  justify-content: right;
+}
+
+.CreateAssignmentsSubmitButton button {
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  border: 0;
+  font-weight: 500;
+
+  height: 40px;
+  width: 150px;
+  background-color: rgb(1, 46, 88);
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: pre-wrap;
+}
+
+.TeacherGradesContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(165, 165, 165, 0.4);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.TeacherGradesContainer * {
+  word-wrap: break-word;
+}
+
+.TeacherGrades_Title {
+  display: flex;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+
+.TeacherGrades_items {
+  display: flex;
+  flex-direction: column;
+}
+
+.TeacherGrades_TitleItems {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+  width: 100%;
+  font-size: calc(1vw);
+}
+
+.TeacherGrades_Title>div>div[id="assignment"] {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-left: rgb(100, 100, 100, 0.5) solid 1px;
+  border-bottom: rgb(100, 100, 100, 0.5) solid 1px;
+  padding: 5px;
+  gap: 10px;
+}
+
+.TeacherGrades_Title>div>div[id="total"] {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: end;
+  border-left: rgb(100, 100, 100, 0.5) solid 1px;
+  border-bottom: rgb(100, 100, 100, 0.5) solid 1px;
+  padding: 5px;
+  gap: 10px;
+  font-size: calc(1vw + 10%);
+}
+
+.TeacherGrades_Title>div>div[id="assignment"]>div {
+  padding: 1px;
+}
+
+.TeacherGrades_Title>div[id="student"] {
+  width: 150px;
+  min-width: 150px;
+  display: flex;
+  align-items: end;
+  padding: 5px;
+  border-bottom: rgb(100, 100, 100, 0.5) solid 1px;
+  border-right: rgb(100, 100, 100, 0.5) solid 1px;
+  font-weight: 600;
+
+}
+
+.TeacherGrades_row {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  border-top: rgb(100, 100, 100, 0.5) solid 1px;
+
+}
+
+.TeacherGrades_row>div[id="student"] {
+  width: 150px;
+  min-width: 150px;
+  border-right: rgb(100, 100, 100, 0.5) solid 1px;
+  padding: 5px;
+}
+
+.TeacherGrade_row_ass {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+  width: 100%;
+}
+
+.TeacherGrade_row_ass>*[id="grade"] {
+  background-color: rgb(255, 255, 255, 0.8);
+  border: none;
+  border-left: rgb(100, 100, 100, 0.5) solid 1px;
+  border-radius: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-size: 1vw;
+}
+
+.TeacherGrade_row_ass>*[id="grade"]:disabled {
+  opacity: 100%;
+}
+
+.TeacherGrade_row_ass>*[id="grade"]:focus {
+  opacity: 100%;
+  border-radius: 0px;
+  outline-color: #19647e;
+}
+
+
+.TeacherGrades_top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  padding-bottom: 10px;
+}
+
+.TeacherGrades_topButtons>div {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.TeacherGrades_topButtons button {
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  border: 0;
+  font-weight: 500;
+
+  height: 40px;
+  width: 100px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: pre-wrap;
+}
+
+.TeacherGrades_filters {
+  width: 200px;
+  padding-bottom: 10px;
+}
+
+.TeacherGrades_filters label {
+  font-size: small;
+}
