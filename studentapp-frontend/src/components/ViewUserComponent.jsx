@@ -455,8 +455,6 @@ class CreateStudentComponent extends Component {
     );
   }
 
- 
-
   onBtnCancel() {
     this.props.history(-1);
     setTimeout(() => {

@@ -23,4 +23,5 @@ class TeacherService {
   }
 }
 
-export default new TeacherService();
+const fn = new TeacherService();
+export default fn;

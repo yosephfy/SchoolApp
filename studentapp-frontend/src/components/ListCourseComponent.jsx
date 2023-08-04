@@ -47,15 +47,18 @@ class ListCourseComponent extends Component {
                         {course.pre_reqs
                           .replace(/\[(.*)\]/, "$1")
                           .split(",")
-                          .map((req) => (
-                            <a className="" key={req}>
-                              {
-                                this.state.courses.find(
-                                  (elem) => Number(elem.id) === parseInt(req)
-                                ).name
-                              }{" "}
-                            </a>
-                          ))}
+                          .map((req) => {
+                            let c = this.state.courses.find(
+                              (elem) => Number(elem.id) === parseInt(req)
+                            );
+                            return (
+                              <label className="" key={req}>
+                                <a href={"course/view-course/" + c.id}>
+                                  {c.name}
+                                </a>
+                              </label>
+                            );
+                          })}
                       </div>
                     </div>
                     <div className="coursedescriptiondiv">

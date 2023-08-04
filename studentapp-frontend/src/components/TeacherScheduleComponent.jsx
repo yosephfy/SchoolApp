@@ -6,8 +6,8 @@ import ScheduleComponent from "./ScheduleComponent";
 
 const TeacherScheduleComponent = () => {
   const [sections, setSections] = useState([]);
-  const [schedule, setSchedule] = useState([]);
   const [courses, setCourses] = useState([]);
+
   useEffect(() => {
     const fetchSections = async (sectionId) => {
       const sectionData = await CourseServices.getSectionById(sectionId);
@@ -25,7 +25,6 @@ const TeacherScheduleComponent = () => {
       scheduleData.data.forEach((element) => {
         fetchSections(element.sectionId);
       });
-      setSchedule(scheduleData.data);
     };
 
     const fetchCourse = async (courseId) => {
@@ -35,7 +34,7 @@ const TeacherScheduleComponent = () => {
     };
 
     fetchTeacherSchedule();
-  }, []);
+  }, [courses, sections]);
 
   const getSchedule = () => {
     const secs = sections;

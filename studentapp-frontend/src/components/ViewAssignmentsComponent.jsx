@@ -19,7 +19,7 @@ function ViewAssignmentComponent() {
     ).then((res) => {
       setGrades(res.data);
     });
-  }, []);
+  }, [assignmentId]);
 
   const getStatus = () => {
     if (grades && grades.status === "GRADED") {

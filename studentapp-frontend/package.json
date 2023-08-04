@@ -13,7 +13,6 @@
     "jquery": "^3.7.0",
     "popper.js": "^1.16.1",
     "react": "^18.2.0",
-    "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",
     "react-native": "^0.72.1",
     "react-router": "^6.11.2",

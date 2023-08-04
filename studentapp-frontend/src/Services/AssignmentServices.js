@@ -65,4 +65,5 @@ class AssignmentService {
   }
 }
 
-export default new AssignmentService();
+const fn = new AssignmentService();
+export default fn;

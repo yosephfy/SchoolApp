@@ -25,5 +25,5 @@ class LoginService {
     return axios.delete(LOGIN_API_BASE_URL + "/" + id);
   }
 }
-
-export default new LoginService();
+const fn = new LoginService();
+export default fn;

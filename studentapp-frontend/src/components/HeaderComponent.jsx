@@ -4,8 +4,8 @@ import { AuthService } from "../Services/AuthService";
 import StudentServices from "../Services/StudentServices";
 import TeacherServices from "../Services/TeacherServices";
 import { useViewStudent, useViewTeacher } from "../Utilities";
-import profileCircle from "../profile-circle-svgrepo-com (2).svg";
-import logoutImg from "../log-out.svg";
+import profileCircle from "../Assets/profile-circle-svgrepo-com (2).svg";
+import logoutImg from "../Assets/log-out.svg";
 
 const HeaderComponent = () => {
   const [user, setUser] = useState({});
@@ -66,67 +66,21 @@ const HeaderComponent = () => {
     history("/login");
   };
 
-  const userProfile = () => {
-    return (
-      <div ref={menuRef} className="flex flex-col dropDownProfile shadow">
-        <div ref={menuRef} className="viewStudentInfo_profileSide_img">
-          <img src={user.profilePicture} alt="" />
-        </div>
-        <ul
-          ref={menuRef}
-          className="flex felx-col text-center gap-4 no-bullets "
-        >
-          <li className="dropDownItems dropDownText">
-            <label className="dropDownText">{user.email}</label>
-          </li>
-          <li className="dropDownItems dropDownText">
-            <label className="dropDownText">ID: {user.id}</label>
-          </li>
-          <li className="dropDownItems dropDownText">
-            <label className="dropDownText">
-              {user.firstName} {user.lastName}
-            </label>
-          </li>
-          <li
-            className="dropDownItems dropDownText"
-            onClick={() => {
-              setProfileOpened(false);
-              if (catagory === "ADMIN") {
-                return viewStudent(user.id);
-              } else if (catagory === "PARENT") {
-                return viewStudent(user.id);
-              } else if (catagory === "STUDENT") {
-                return viewStudent(user.id);
-              } else if (catagory === "TEACHER") {
-                return viewTeacher(user.id);
-              }
-            }}
-          >
-            <label className="dropDownText">Profile</label>
-          </li>
-          <li className="dropDownItems dropDownText" onClick={handleLogout}>
-            <label className="dropDownText">Logout</label>
-          </li>
-        </ul>
-      </div>
-    );
-  };
-
-  const test = () => {
+  const profileModal = () => {
     return (
       <section className="flex flex-col dropDownProfile ">
         <div className="text-center">
           <div id="image">
-            <img src={user.profilePicture} className="" />
+            <img src={user.profilePicture} className="" alt="" />
           </div>
           <h4 className="">
             {user.firstName} {user.lastName}
           </h4>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <label className="">{user.id}</label>
-            <a className="" href="">
+            <div className="" href="">
               {user.email}
-            </a>
+            </div>
           </div>
           <br />
           <div>
@@ -158,7 +112,7 @@ const HeaderComponent = () => {
 
   const getLoginLogoutButton = () => {
     if (AuthService.isLoggedIn()) {
-      return <div>{profileOpened && test()}</div>;
+      return <div>{profileOpened && profileModal()}</div>;
     } else {
       return (
         <button className="btn btn-primary" onClick={handleLogin}>
@@ -190,6 +144,7 @@ const HeaderComponent = () => {
               <div className="text-center ">{getLoginLogoutButton()}</div>
               {AuthService.isLoggedIn() && Object.keys(user).length > 0 && (
                 <img
+                  alt=""
                   ref={profRef}
                   className="profileImage "
                   src={profileCircle}

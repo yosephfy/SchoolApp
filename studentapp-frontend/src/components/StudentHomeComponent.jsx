@@ -8,13 +8,13 @@ import {
   useViewStudent,
   useViewStudentSchedule,
 } from "../Utilities";
-import reportCardLogo from "../blank-svgrepo-com.svg";
-import scheduleLogo from "../calendar-svgrepo-com.svg";
-import myClassesLogo from "../course-diary-svgrepo-com.svg";
-import coursesLogo from "../courses-svgrepo-com.svg";
-import courseReqLogo from "../edit-report-svgrepo-com.svg";
-import teachersStaffLogo from "../user-list-svgrepo-com.svg";
-import studentProfileLogo from "../user-svgrepo-com.svg";
+import reportCardLogo from "../Assets/blank-svgrepo-com.svg";
+import scheduleLogo from "../Assets/calendar-svgrepo-com.svg";
+import myClassesLogo from "../Assets/course-diary-svgrepo-com.svg";
+import coursesLogo from "../Assets/courses-svgrepo-com.svg";
+import courseReqLogo from "../Assets/edit-report-svgrepo-com.svg";
+import teachersStaffLogo from "../Assets/user-list-svgrepo-com.svg";
+import studentProfileLogo from "../Assets/user-svgrepo-com.svg";
 
 class StudentHomeComponent extends Component {
   constructor(props) {
@@ -118,7 +118,7 @@ class StudentHomeComponent extends Component {
 const ComponentBox = (props) => {
   return (
     <div className="homeComponentApps" onClick={props.func}>
-      <img src={props.img} />
+      <img src={props.img} alt="" />
       <label>{props.label}</label>
     </div>
   );

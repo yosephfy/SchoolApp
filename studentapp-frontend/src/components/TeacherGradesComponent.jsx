@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import StudentServices from "../Services/StudentServices";
 import StudentClassService from "../Services/StudentClassService";
 import { useParams } from "react-router";
 import AssignmentServices from "../Services/AssignmentServices";
@@ -11,9 +10,6 @@ const TeacherGradesComponent = () => {
   const [grades, setGrades] = useState([]);
   const [updatedGrades, setUpdatedGrades] = useState([]);
   const [editing, setEditing] = useState(false);
-  const [filters, setFilters] = useState([
-    { value: "HOMEWORK", label: "Homework" },
-  ]);
   const [filterFunc, setFilterFunc] = useState({
     func: (a) => a,
   });
@@ -108,7 +104,7 @@ const TeacherGradesComponent = () => {
   const SingleStudentGrade = ({ student, grade, assignment }) => {
     const handleGradeChange = (studentId, gradeId, score) => {
       let newGrade = grades.map((e) => {
-        if (e.id == gradeId) {
+        if (e.id === gradeId) {
           return { ...e, score: score };
         }
         return e;
@@ -151,7 +147,7 @@ const TeacherGradesComponent = () => {
                 id="grade"
                 defaultValue={`${g ? g.score : "-"}`}
                 onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key == "Tab=")
+                  if (e.key === "Enter" || e.key === "Tab=")
                     handleGradeChange(student.id, g.id, Number(e.target.value));
                 }}
                 onBlur={(e) =>
@@ -160,7 +156,6 @@ const TeacherGradesComponent = () => {
                 disabled={!editing}
               />
             );
-            return <div id="grade">{g ? g.score : "-"}</div>;
           })}
           <div id="grade">
             <div>{`${average.toPrecision(3)}%`}</div>
@@ -169,13 +164,6 @@ const TeacherGradesComponent = () => {
       </div>
     );
   };
-
-  const onChangeFilter = (e) => {
-    if (e.target.value === "HOMEWORK") {
-      setFilterFunc({ func: (a) => a.type });
-    }
-  };
-
   return (
     <div>
       <div className="TeacherGrades_top">

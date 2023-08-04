@@ -68,9 +68,9 @@ class CourseService {
     return axios.put(REQUESTEDCOURSE_API_BASE_URL + "/" + id, requestedCourse);
   }
 
-  deleteCourse(id) {
+  deleteRequestedCourse(id) {
     return axios.delete(REQUESTEDCOURSE_API_BASE_URL + "/" + id);
   }
 }
-
-export default new CourseService();
+const fn = new CourseService();
+export default fn;

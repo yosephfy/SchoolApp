@@ -44,7 +44,6 @@ function ReportCardComponent() {
     fetchSchedule();
   }, [id]);
 
-
   let x = 0;
   return (
     <div className="ReportCardContainer">
@@ -81,6 +80,7 @@ function ReportCardComponent() {
                     </div>
                   </div>
                 );
+              return <div>No Data</div>;
             })}
         </div>
         <hr />

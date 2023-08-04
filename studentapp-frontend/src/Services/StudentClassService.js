@@ -61,4 +61,5 @@ class StudentClassService {
   }
 }
 
-export default new StudentClassService();
+const fn = new StudentClassService();
+export default fn;

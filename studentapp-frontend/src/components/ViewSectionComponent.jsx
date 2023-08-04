@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import CourseServices from "../Services/CourseServices";
 import StudentClassService from "../Services/StudentClassService";
-import TeacherServices from "../Services/TeacherServices";
 import {
   parseNameToObject,
   useViewListAssignment,
@@ -19,8 +18,6 @@ function ViewSectionComponent() {
   const [schedule, setSchedule] = useState({});
   const [section, setSection] = useState({});
   const [course, setCourse] = useState({});
-  const [teacher, setTeacher] = useState({});
-  const [student, setStudent] = useState({});
 
   const [colors, setColors] = useState([
     "rgb(33, 150, 243)",
@@ -50,16 +47,11 @@ function ViewSectionComponent() {
     const fetchSection = async (id) => {
       const sectionData = await CourseServices.getSectionById(Number(id));
       await fetchCourse(Number(sectionData.data.courseId));
-      await fetchTeacher(Number(sectionData.data.teacherId));
       setSection(sectionData.data);
     };
     const fetchCourse = async (id) => {
       const courseData = await CourseServices.getCourseById(id);
       setCourse(courseData.data);
-    };
-    const fetchTeacher = async (id) => {
-      const teacherData = await TeacherServices.getTeacherById(id);
-      setTeacher(teacherData.data);
     };
 
     if (category === "student") {

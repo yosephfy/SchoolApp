@@ -14,7 +14,6 @@ const ListOfPeopleComponent = () => {
   const loggedInUser = AuthService.getUser();
 
   const [people, setPeople] = useState([]);
-  const [courses, setCourses] = useState([]);
   const [sections, setSections] = useState([]);
   const [selectedSection, setSelectedSection] = useState("");
   const [selectedGradeLevel, setSelectedGradeLevel] = useState(0);
@@ -50,7 +49,6 @@ const ListOfPeopleComponent = () => {
 
     const fetchCourses = async () => {
       const courseData = await CourseServices.getCourses();
-      setCourses(courseData.data);
       setCoursesLabel(
         courseData.data
           .map((elem) => {
@@ -155,6 +153,8 @@ const ListOfPeopleComponent = () => {
               sectionIds.includes(elem.sectionId)
             );
           }
+
+          return false;
         });
         return arr.length > 0;
       };
@@ -188,6 +188,8 @@ const ListOfPeopleComponent = () => {
               Number(selectedSection) === Number(elem.sectionId)
             );
           }
+
+          return false;
         });
         return arr.length > 0;
       };
@@ -219,6 +221,8 @@ const ListOfPeopleComponent = () => {
               func={onSelectGradeLevel}
               clearable={false}
               searchable={false}
+              rtl={false}
+              loading={false}
             />
           </div>
         )}
@@ -231,6 +235,8 @@ const ListOfPeopleComponent = () => {
             func={onCourseSelected}
             clearable={true}
             searchable={true}
+            rtl={false}
+            loading={false}
           />
         </div>
         <div className="listOfPeopleFilter_items">
@@ -242,6 +248,8 @@ const ListOfPeopleComponent = () => {
             func={onSectionSelected}
             clearable={true}
             searchable={true}
+            rtl={false}
+            loading={false}
           />
         </div>
         <div className="listOfPeopleFilter_buttons">

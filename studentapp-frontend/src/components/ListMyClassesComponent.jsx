@@ -67,7 +67,7 @@ const StudentClassesComponent = () => {
     } else if (catagory === "teacher") {
       fetchTeacherClasses();
     }
-  }, []);
+  }, [catagory, id]);
 
   return (
     <div className="">
@@ -84,7 +84,7 @@ const StudentClassesComponent = () => {
           sections.length >= classes.length &&
           classes.map((elem) => {
             let s = sections.find((e) => e.id === elem.sectionId);
-            if (s != undefined)
+            if (s !== undefined)
               return (
                 <ClassBox
                   key={elem.sectionId}
@@ -109,6 +109,7 @@ const StudentClassesComponent = () => {
                   func={viewMySection}
                 />
               );
+            return <div></div>;
           })}
       </div>
     </div>

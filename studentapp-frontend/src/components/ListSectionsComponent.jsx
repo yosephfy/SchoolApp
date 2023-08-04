@@ -76,7 +76,7 @@ const ListSectionsComponent = () => {
             {teachers.length >= courseSections.length &&
               courseSections.map((section) => {
                 let s = teachers.find((elem) => elem.id === section.teacherId);
-                if (s != undefined)
+                if (s !== undefined)
                   return (
                     <tr key={x++}>
                       <td className="ListSections_row">
@@ -104,6 +104,7 @@ const ListSectionsComponent = () => {
                       </td>
                     </tr>
                   );
+                return <div>No data</div>;
               })}
           </tbody>
         </table>

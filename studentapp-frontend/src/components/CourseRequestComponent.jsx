@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import Select from "react-select";
 import CourseServices from "../Services/CourseServices";
 import TeacherServices from "../Services/TeacherServices";
 import { addMilitaryAndMinutes } from "../Utilities";
@@ -24,8 +23,6 @@ function CourseRequestComponent() {
 
   const [coursesName, setCoursesName] = useState([]);
   const [sectionsId, setSectionsId] = useState([]);
-
-  const [sections, setSections] = useState([]);
 
   useEffect(() => {
     CourseServices.getCourses().then((res) => {
@@ -54,7 +51,6 @@ function CourseRequestComponent() {
         secs.push({ value: element.id, label: element.sectionNum });
       });
 
-      setSections(res.data);
       setSectionsId(secs);
     });
   }
@@ -117,7 +113,6 @@ function CourseRequestComponent() {
     setChosenSection([]);
     setClasses([]);
     setCurrSection("");
-    setSections([]);
     setSectionsId([]);
     setTeachers([]);
   };
@@ -161,6 +156,8 @@ function CourseRequestComponent() {
             func={OnSelectSemester}
             clearable={false}
             searchable={false}
+            rtl={false}
+            loading={false}
           />
         </div>
         <div className=" " style={{ flex: "2 0 auto", width: "100px" }}>
@@ -170,10 +167,12 @@ function CourseRequestComponent() {
           <SearchBar
             label="Courses"
             data={coursesName}
-            disabled={sectionsId.length === 0}
+            disabled={coursesName.length === 0}
             func={onSelectCourse}
             clearable={true}
             searchable={true}
+            rtl={false}
+            loading={false}
           />
         </div>
         <div className="" style={{ flex: "0.5 1 auto", width: "100px" }}>
@@ -187,6 +186,8 @@ function CourseRequestComponent() {
             func={onSelectSection}
             clearable={true}
             searchable={true}
+            rtl={false}
+            loading={false}
           />
         </div>
         <div
@@ -213,13 +214,6 @@ function CourseRequestComponent() {
     </div>
   );
 }
-
-const Checkbox = ({ children, ...props }) => (
-  <label style={{ marginRight: "1em" }}>
-    <input type="checkbox" {...props} />
-    {children}
-  </label>
-);
 
 const ChosenCourses = (props) => {
   return (
@@ -259,6 +253,7 @@ const ChosenCourses = (props) => {
                     </button>
                   </div>
                 );
+              return <div>No Data</div>;
             })}
         </div>
       </div>

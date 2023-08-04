@@ -3,11 +3,11 @@ import { useParams } from "react-router";
 import AssignmentServices from "../Services/AssignmentServices";
 import { AuthService } from "../Services/AuthService";
 import { useCreateAssignment, useViewAssignment } from "../Utilities";
-import readingLogo from "../book-svgrepo-com.svg";
-import examLogo from "../check-education-exam-svgrepo-com.svg";
-import homeworkLogo from "../exam-svgrepo-com (1).svg";
-import testLogo from "../exam-svgrepo-com.svg";
-import quizLogo from "../test-svgrepo-com.svg";
+import readingLogo from "../Assets/book-svgrepo-com.svg";
+import examLogo from "../Assets/check-education-exam-svgrepo-com.svg";
+import homeworkLogo from "../Assets/exam-svgrepo-com (1).svg";
+import testLogo from "../Assets/exam-svgrepo-com.svg";
+import quizLogo from "../Assets/test-svgrepo-com.svg";
 
 const ListOfAssignmentsComponent = () => {
   const [assignments, setAssignments] = useState([]);

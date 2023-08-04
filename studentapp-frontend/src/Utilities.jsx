@@ -8,32 +8,16 @@ export function reverse(value) {
 }
 
 export function phoneNumberFormatter(input) {
-  input = new String(input);
+  input = input + "";
   return input.replace(/(\d{3})(\d{3})(\d{4})/, "$1-$2-$3");
 }
 
-export function genderFromCharToString(value) {
-  let output = "";
-  if (value === "M") {
-    output = "Male";
-  } else if (value === "F") {
-    output = "Female";
-  } else {
-    output = "Other";
-  }
-  return output;
-}
-
 export function parseNameToObject(value) {
-  if (value == undefined || value == null || value == "") {
+  if (value === undefined || value === null || value === "") {
     return { firstName: "", middleName: "", lastName: "", title: "" };
   }
 
   return JSON.parse(value);
-}
-
-export function camelToKebab(value) {
-  return value.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase();
 }
 
 export function fromMilitaryTimeToMin(value) {
@@ -110,39 +94,6 @@ export function fromSystemTimeToDateAndTime(systemTime) {
   };
 
   return result;
-}
-
-export function fromWeekStartTime(startTimeStr) {
-  let startTime = JSON.parse(startTimeStr);
-  let output = [];
-  if (startTime.monday !== "none") {
-    output.push({ date: "M", dateFull: "Monday", time: startTime.monday });
-  }
-  if (startTime.tuesday !== "none") {
-    output.push({ date: "Tu", dateFull: "Tuesday", time: startTime.tuesday });
-  }
-  if (startTime.wednesday !== "none") {
-    output.push({
-      date: "W",
-      dateFull: "Wednesday",
-      time: startTime.wednesday,
-    });
-  }
-  if (startTime.thursday !== "none") {
-    output.push({ date: "Th", dateFull: "Thursday", time: startTime.thursday });
-  }
-  if (startTime.friday !== "none") {
-    output.push({ date: "F", dateFull: "Friday", time: startTime.friday });
-  }
-
-  return output;
-}
-
-export function useGoHere() {
-  const history = useNavigate();
-  return function goHere(val) {
-    history(val);
-  };
 }
 
 export function useViewCourse() {

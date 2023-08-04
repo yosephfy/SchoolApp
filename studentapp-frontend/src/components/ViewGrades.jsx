@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useViewAssignment } from "../Utilities";
-import readingLogo from "../book-svgrepo-com.svg";
-import examLogo from "../check-education-exam-svgrepo-com.svg";
-import homeworkLogo from "../exam-svgrepo-com (1).svg";
-import testLogo from "../exam-svgrepo-com.svg";
-import quizLogo from "../test-svgrepo-com.svg";
+import readingLogo from "../Assets/book-svgrepo-com.svg";
+import examLogo from "../Assets/check-education-exam-svgrepo-com.svg";
+import homeworkLogo from "../Assets/exam-svgrepo-com (1).svg";
+import testLogo from "../Assets/exam-svgrepo-com.svg";
+import quizLogo from "../Assets/test-svgrepo-com.svg";
 
 const ViewGrades = ({
   assignments,
@@ -14,23 +14,9 @@ const ViewGrades = ({
   showUnGraded,
 }) => {
   useEffect(() => {
-    assignments.forEach((elem) => {
-      let temp =
-        grades.filter((e) => Number(e.assignmentId) === Number(elem.id))
-          .length > 0
-          ? grades.find((e) => Number(e.assignmentId) === Number(elem.id))
-          : {
-              assignmentId: "",
-              score: "",
-              status: "NOTSUBMITTED",
-              studentId: "",
-            };
-    });
-
     console.log(grades);
   }, [assignments, grades]);
   let x = 1;
-  //console.log(arr);
   return (
     <div>
       <div className="ListAssignment">

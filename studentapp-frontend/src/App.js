@@ -13,8 +13,6 @@ import HeaderComponent from "./components/HeaderComponent";
 import HomeComponent from "./components/HomeComponent";
 import ListCourseComponent from "./components/ListCourseComponent";
 import ListSectionsComponent from "./components/ListSectionsComponent";
-import ListStudentComponent from "./components/ListStudentComponent";
-import ListTeacherComponent from "./components/ListTeacherComponent";
 import LoginComponent from "./components/LoginComponent";
 import StudentClassesComponent from "./components/ListMyClassesComponent";
 import StudentScheduleComponent from "./components/StudentScheduleComponent";
@@ -28,7 +26,6 @@ import ListOfAssignmentsComponent from "./components/ListOfAssignmentsComponent"
 import ListOfPeopleComponent from "./components/ListOfPeopleComponent";
 import PeopleInSectionComponent from "./components/PeopleInSectionComponent";
 import StudentGradesComponent from "./components/StudentGradesComponent";
-import createAssignment from "./components/CreateAssignmentComponent";
 import CreateAssignment from "./components/CreateAssignmentComponent";
 import TeacherGradesComponent from "./components/TeacherGradesComponent";
 

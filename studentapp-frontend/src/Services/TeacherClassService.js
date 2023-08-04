@@ -52,4 +52,5 @@ class TeacherClassService {
   }
 }
 
-export default new TeacherClassService();
+const fn = new TeacherClassService();
+export default fn;

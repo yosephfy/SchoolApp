@@ -8,7 +8,6 @@ const StudentGradesComponent = () => {
   const { sectionId } = useParams();
   const [assignments, setAssignments] = useState([]);
   const [grades, setGrades] = useState([]);
-  const [assignmentGrade, setAssignmentGrades] = useState([]);
 
   useEffect(() => {
     const fetchAssignments = async () => {
@@ -29,17 +28,7 @@ const StudentGradesComponent = () => {
 
     fetchGrades();
     fetchAssignments();
-    const fetchAssignmentGrades = async () => {
-      assignments.forEach((element) => {
-        let grade = grades.find((e) => e.assignmentId === element.id);
-        setAssignmentGrades((prev) =>
-          prev.concat({ assignment: element, grade: grade })
-        );
-      });
-    };
-
-    fetchAssignmentGrades();
-  }, []);
+  }, [assignments, grades, sectionId]);
 
   return (
     <div>

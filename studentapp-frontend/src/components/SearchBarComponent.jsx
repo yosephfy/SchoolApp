@@ -1,12 +1,6 @@
-import { useState } from "react";
 import Select from "react-select";
 
 const SearchBar = (props) => {
-  const [isClearable, setIsClearable] = useState(true);
-  const [isSearchable, setIsSearchable] = useState(true);
-  const [isDisabled, setIsDisabled] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [isRtl, setIsRtl] = useState(false);
   return (
     <div>
       <Select
@@ -14,10 +8,10 @@ const SearchBar = (props) => {
         placeholder={props.label}
         className="basic-single"
         classNamePrefix="select"
-        isDisabled={isDisabled}
-        isLoading={isLoading}
+        isDisabled={props.disabled}
+        isLoading={props.loading}
         isClearable={props.clearable}
-        isRtl={isRtl}
+        isRtl={props.rtl}
         isSearchable={props.searchable}
         name="color"
         options={props.data}
@@ -32,35 +26,7 @@ const SearchBar = (props) => {
           fontStyle: "italic",
           marginTop: "1em",
         }}
-      >
-        {/* <Checkbox
-          checked={isClearable}
-          onChange={() => setIsClearable((state) => !state)}
-        >
-          Clearable
-        </Checkbox>
-        <Checkbox
-          checked={isSearchable}
-          onChange={() => setIsSearchable((state) => !state)}
-        >
-          Searchable
-        </Checkbox>
-        <Checkbox
-          checked={isDisabled}
-          onChange={() => setIsDisabled((state) => !state)}
-        >
-          Disabled
-        </Checkbox>
-        <Checkbox
-          checked={isLoading}
-          onChange={() => setIsLoading((state) => !state)}
-        >
-          Loading
-        </Checkbox>
-        <Checkbox checked={isRtl} onChange={() => setIsRtl((state) => !state)}>
-          RTL
-        </Checkbox> */}
-      </div>
+      ></div>
     </div>
   );
 };

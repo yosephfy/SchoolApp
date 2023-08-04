@@ -274,7 +274,13 @@ ul.no-bullets {
 
 .courseprereqdiv {
   font-size: small;
-  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  gap: 3px;
+}
+
+.courseprereqdiv a {
+  color: #19647e;
 }
 
 .coursedescriptiondiv {
@@ -1376,7 +1382,7 @@ select {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
   border-left: rgb(100, 100, 100, 0.5) solid 1px;
   border-bottom: rgb(100, 100, 100, 0.5) solid 1px;
   padding: 5px;
@@ -1392,7 +1398,7 @@ select {
   width: 150px;
   min-width: 150px;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   padding: 5px;
   border-bottom: rgb(100, 100, 100, 0.5) solid 1px;
   border-right: rgb(100, 100, 100, 0.5) solid 1px;
@@ -1449,7 +1455,7 @@ select {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: end;
+  align-items: flex-end;
   padding-bottom: 10px;
 }
 

@@ -7,12 +7,12 @@ import {
   useViewTeacher,
   useViewTeacherSchedule,
 } from "../Utilities";
-import scheduleLogo from "../calendar-svgrepo-com.svg";
-import myClassesLogo from "../course-diary-svgrepo-com.svg";
-import coursesLogo from "../courses-svgrepo-com.svg";
-import allStudentsLogo from "../group-of-people-svgrepo-com.svg";
-import teachersStaffLogo from "../user-list-svgrepo-com.svg";
-import teacProfileLogo from "../user-svgrepo-com.svg";
+import scheduleLogo from "../Assets/calendar-svgrepo-com.svg";
+import myClassesLogo from "../Assets/course-diary-svgrepo-com.svg";
+import coursesLogo from "../Assets/courses-svgrepo-com.svg";
+import allStudentsLogo from "../Assets/group-of-people-svgrepo-com.svg";
+import teachersStaffLogo from "../Assets/user-list-svgrepo-com.svg";
+import teacProfileLogo from "../Assets/user-svgrepo-com.svg";
 
 const TeacherHomeComponent = () => {
   const id = AuthService.getUserId();
@@ -101,7 +101,7 @@ const TeacherHomeComponent = () => {
 const ComponentBox = (props) => {
   return (
     <div className="homeComponentApps" onClick={props.func}>
-      <img src={props.img} />
+      <img src={props.img} alt="" />
       <label>{props.label}</label>
     </div>
   );

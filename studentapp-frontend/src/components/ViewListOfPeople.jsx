@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useViewStudent, useViewTeacher } from "../Utilities";
+import { useViewStudent } from "../Utilities";
 
 const ViewPeople = ({
   people,
@@ -15,7 +15,6 @@ const ViewPeople = ({
 }) => {
   const [thisSortFunc, setThisSortFunc] = useState({ f: sortFunc });
   const viewStudent = useViewStudent();
-  const viewTeacher = useViewTeacher();
   let filteredPeople = people.filter(filterFunc).sort(thisSortFunc.f);
 
   function onSortById() {
