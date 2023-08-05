@@ -102,4 +102,4 @@ To contribute to SchoolApp, follow these steps:
 
 ## License
 
-This project is licensed under the MIT License(LICENCE) file for details.
+This project is licensed under the MIT License(LICENCE).
