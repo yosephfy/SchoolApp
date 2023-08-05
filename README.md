@@ -89,7 +89,7 @@ The current version of SchoolApp has some areas that can be further improved. Ad
 2. Set up the necessary development environment.
 3. Open the backend and frontend projects using separate editors.
 4. To run the backend, execute the application.
-5. To run the frontend, open the project directory and use npm run start.
+5. To run the frontend, open the project directory and use `npm run start`.
 
 ## Contribution
 
