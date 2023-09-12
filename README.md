@@ -29,6 +29,7 @@ To ensure security, the backend uses a table in the database to store login info
 ### Technologies Used
 - ReactJS
 - React Router
+- Cookies
 
 ### User Interface
 The frontend offers a responsive and user-friendly design, allowing users to access the app from various devices. The landing pages, such as `StudentHomeComponent` and `TeacherHomeComponent`, are based on the user's role. For unauthenticated users, there is a landing login page where they can log in as an admin, teacher, student, or parent.
